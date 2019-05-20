@@ -1,4 +1,4 @@
-package br.com.lanza.core;
+package br.com.lanza.runners;
 
 import org.junit.runner.RunWith;
 
@@ -8,6 +8,10 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+		//features = "src/test/resources/features/aprender_cucumber.feature",
+		features = "src/test/resources/features/alugar_filme.feature",
+		glue = "br.com.lanza.steps",
+		tags = {},
 		plugin = "pretty",  				//deixa bonitinho
 		monochrome = true,  				//tira os caracteres especiais, pq ele tira os campos que iriam melhorar a visualizacao
 		snippets = SnippetType.CAMELCASE, 	//cria os metodos no camelcase 
